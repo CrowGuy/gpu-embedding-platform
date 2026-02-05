@@ -1,0 +1,15 @@
+model: /models/pubmedbert-base-embeddings
+served_model_name: pubmedbert-embed
+
+host: 0.0.0.0
+port: 8001
+
+api_key: eslllm
+
+dtype: auto
+
+# PubMedBERT-embeddings 通常較小，下面先保守留空，等 benchmark 再調
+# gpu_memory_utilization: 0.60
+# max_num_seqs: 128
+# max_num_batched_tokens: 8192
+# max_model_len: 512

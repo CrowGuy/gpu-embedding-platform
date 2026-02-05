@@ -3,10 +3,10 @@ set -euo pipefail
 
 CONFIG_FILE="${VLLM_CONFIG:-/app/config/vllm.yaml}"
 
-MODEL="${MODEL:-/models/Qwen3-Embedding-8B}"
-SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-qwen3-embed-8b}"
+MODEL="${MODEL:-/models/biomednlp-biomedbert}"
+SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-biomednlp-biomedbert}"
 HOST="${HOST:-0.0.0.0}"
-PORT="${PORT:-8000}"
+PORT="${PORT:-8002}"
 API_KEY="${API_KEY:-eslllm}"
 
 DTYPE="${DTYPE:-auto}"
@@ -49,11 +49,11 @@ PY
   )"
 fi
 
-echo "[vllm-qwen3-embed] MODEL=$MODEL"
-echo "[vllm-qwen3-embed] SERVED_MODEL_NAME=$SERVED_MODEL_NAME"
-echo "[vllm-qwen3-embed] HOST=$HOST PORT=$PORT"
-echo "[vllm-qwen3-embed] DTYPE=$DTYPE"
-echo "[vllm-qwen3-embed] API_KEY=${API_KEY:0:2}*** (masked)"
+echo "[vllm-biomednlp-biomedbert] MODEL=$MODEL"
+echo "[vllm-biomednlp-biomedbert] SERVED_MODEL_NAME=$SERVED_MODEL_NAME"
+echo "[vllm-biomednlp-biomedbert] HOST=$HOST PORT=$PORT"
+echo "[vllm-biomednlp-biomedbert] DTYPE=$DTYPE"
+echo "[vllm-biomednlp-biomedbert] API_KEY=${API_KEY:0:2}*** (masked)"
 
 ARGS=(
   --model "$MODEL"

@@ -3,8 +3,8 @@ set -euo pipefail
 
 CONFIG_FILE="${VLLM_CONFIG:-/app/config/vllm.yaml}"
 
-MODEL="${MODEL:-/models/Qwen3-Embedding-8B}"
-SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-qwen3-embed-8b}"
+MODEL="${MODEL:-/models/pubmedbert-base-embeddings}"
+SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-pubmedbert-embed}"
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-8000}"
 API_KEY="${API_KEY:-eslllm}"
@@ -49,11 +49,11 @@ PY
   )"
 fi
 
-echo "[vllm-qwen3-embed] MODEL=$MODEL"
-echo "[vllm-qwen3-embed] SERVED_MODEL_NAME=$SERVED_MODEL_NAME"
-echo "[vllm-qwen3-embed] HOST=$HOST PORT=$PORT"
-echo "[vllm-qwen3-embed] DTYPE=$DTYPE"
-echo "[vllm-qwen3-embed] API_KEY=${API_KEY:0:2}*** (masked)"
+echo "[vllm-pubmedbert] MODEL=$MODEL"
+echo "[vllm-pubmedbert] SERVED_MODEL_NAME=$SERVED_MODEL_NAME"
+echo "[vllm-pubmedbert] HOST=$HOST PORT=$PORT"
+echo "[vllm-pubmedbert] DTYPE=$DTYPE"
+echo "[vllm-pubmedbert] API_KEY=${API_KEY:0:2}*** (masked)"
 
 ARGS=(
   --model "$MODEL"

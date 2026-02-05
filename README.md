@@ -39,7 +39,13 @@ gpu-embedding-platform/
         vllm.yaml           # 你可把參數集中
       README.md
 
-    vllm-pubmedbert/         # vLLM service: PubMedBERT (pooling)
+    vllm-pubmedbert-embed/         # vLLM service: pubmedbert-base-embeddings (pooling)
+      Dockerfile
+      start.sh
+      config/
+      README.md
+
+    vllm-biomednlp-biomedbert/         # vLLM service: biomednlp-biomedbert (pooling)
       Dockerfile
       start.sh
       config/
