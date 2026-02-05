@@ -1,0 +1,18 @@
+# vLLM OpenAI-compatible embedding service config
+model: /models/Qwen3-Embedding-8B
+served_model_name: qwen3-embed-8b
+
+host: 0.0.0.0
+port: 8000
+
+# Use a real secret manager in prod; for local dev it's fine
+api_key: eslllm
+
+# Perf / memory knobs (optional)
+dtype: auto
+
+# Uncomment/tune after you benchmark
+# max_model_len: 8192
+# gpu_memory_utilization: 0.90
+# max_num_batched_tokens: 8192
+# max_num_seqs: 64
