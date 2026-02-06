@@ -1,4 +1,4 @@
-FROM vllm/vllm-openai:latest
+FROM vllm/vllm-openai:v0.10.2-x86_64
 
 RUN python3 -m pip install --no-cache-dir pyyaml
 

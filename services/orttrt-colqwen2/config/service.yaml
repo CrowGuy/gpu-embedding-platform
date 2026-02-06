@@ -1,7 +1,7 @@
 host: 0.0.0.0
 port: 8010
 
-model_dir: /models/colqwen2-1.0
+model_dir: /models/colqwen2-v1.0
 # onnx_path: /models/colqwen2-1.0/model.onnx
 
 provider: tensorrt   # tensorrt|cuda|cpu

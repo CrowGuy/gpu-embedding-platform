@@ -6,7 +6,7 @@ CONFIG_FILE="${SERVICE_CONFIG:-/app/config/service.yaml}"
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-8010}"
 
-MODEL_DIR="${MODEL_DIR:-/models/colqwen2-1.0}"
+MODEL_DIR="${MODEL_DIR:-/models/colqwen2-v1.0}"
 ONNX_PATH="${ONNX_PATH:-}"              # optional override
 PROVIDER="${PROVIDER:-tensorrt}"        # tensorrt|cuda|cpu
 TRT_FP16="${TRT_FP16:-1}"

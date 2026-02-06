@@ -10,8 +10,8 @@ Serve ColQwen2 embeddings using ONNX Runtime + TensorRT EP (with CUDA/CPU fallba
 ```
 
 Expected directories:
-- Host model dir: `/nvme/models_active/colqwen2-1.0`
-- Container model dir: `/models/colqwen2-1.0`
+- Host model dir: `/nvme/models_active/colqwen2-v1.0`
+- Container model dir: `/models/colqwen2-v1.0`
 - Host cache dir (recommended): `/nvme/docker/ort_cache` -> `/cache`
 
 ## Build
