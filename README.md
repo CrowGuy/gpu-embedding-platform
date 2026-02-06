@@ -105,6 +105,11 @@ gpu-embedding-platform/
 
 ## API（OpenAI-compatible /v1/embeddings + router 的 model= 路由）
 
+## Export & Serving Policy
+- Training / HF checkpoint precision: bf16 / fp32 (model-dependent)
+- ONNX export precision: fp16 (preferred), fp32 (fallback)
+- ONNX Runtime / TensorRT serving precision: fp16
+
 ## Observability（Grafana dashboard 截圖 + 指標）
 
 ## Benchmarks（你跑出來的吞吐/延遲表）
