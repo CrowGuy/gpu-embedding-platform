@@ -1,0 +1,19 @@
+host: 0.0.0.0
+port: 8002
+
+model_dir: /models/biomednlp-biomedbert
+served_model_name: biomednlp-biomedbert
+
+device: cuda          # cuda|cpu
+dtype: fp16           # fp16|fp32 (bf16 optional later)
+
+max_length: 256
+pooling: mean         # mean|cls
+normalize: 1          # 1 => L2 normalize
+
+api_key: eslllm
+
+# micro-batching
+max_batch_size: 32
+batch_wait_ms: 5
+max_concurrency: 64
