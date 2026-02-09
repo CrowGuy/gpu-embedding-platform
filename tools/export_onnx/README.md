@@ -50,23 +50,6 @@ bash tools/export_onnx/biomedbert_optimum.sh \
 - vLLM does not support `BertForMaskedLM` as a serving architecture, so ORT is the preferred backend.
 
 ---
-### 2) ColQwen2-like (multimodal embedding)
-Exporter: `colqwen2_export.py`
-Method: `torch.onnx.export` with a small wrapper that extracts an embedding tensor.
-
-**Usage (GPU recommended)**
-```bash
-python3 tools/export_onnx/colqwen2_export.py \
-  --model-dir /nvme/models_active/Colqwen2-1.0 \
-  --out-dir /nvme/models_active/Colqwen2-1.0/onnx \
-  --device cuda \
-  --opset 17 \
-  --max-length 128 \
-  --image-size 448 \
-  --trust-remote-code
-```
-**Output**
-- `.../onnx/model.onnx`
 
 **Notes**
 - Multimodal models may require additional inputs (e.g. `image_mask`).
