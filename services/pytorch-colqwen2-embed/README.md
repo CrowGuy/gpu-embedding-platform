@@ -19,8 +19,8 @@ Both endpoints support:
 └── models_active
 ```
 Expected model dir:
-- Host: `/nvme/models_active/Colqwen2-v1.0`
-- Container: `/models/Colqwen2-v1.0`
+- Host: `/nvme/models_active/colqwen2-v1.0`
+- Container: `/models/colqwen2-v1.0`
 
 ## Build
 ```bash
@@ -34,7 +34,7 @@ sudo docker run --rm --runtime nvidia --gpus all --ipc=host \
   -p 8003:8003 \
   --name pytorch-colqwen2-embed \
   -e API_KEY=eslllm \
-  -e MODEL_DIR=/models/Colqwen2-v1.0 \
+  -e MODEL_DIR=/models/colqwen2-v1.0 \
   -e SERVED_MODEL_NAME=colqwen2-embed \
   pytorch-colqwen2-embed
 ```

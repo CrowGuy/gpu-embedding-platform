@@ -15,6 +15,9 @@ RUN python3 -m pip install --no-cache-dir \
     fastapi uvicorn[standard] numpy pillow \
     transformers
 
+# add colpali-engine (ColQwen2 reference implementation)
+RUN python3 -m pip install --no-cache-dir colpali-engine
+
 # Torch CUDA wheel (12.4)
 RUN python3 -m pip install --no-cache-dir \
     torch --index-url https://download.pytorch.org/whl/cu124
