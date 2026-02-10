@@ -10,6 +10,16 @@ Both endpoints support:
 - `output="pooled"`: single vector per input (OpenAI-like)
 - `output="multivector"`: list of vectors per input (late-interaction friendly)
 
+## Merge models
+```bash
+python tools/merge_adapters/merge_colqwen2.py \
+  --base_dir /nvme/models_active/colqwen2-base \
+  --adapter_dir /nvme/models_active/colqwen2-v1.0 \
+  --out_dir /nvme/models_active/colqwen2-v1.0-merged \
+  --dtype bf16 \
+  --trust_remote_code
+```
+
 ## Host paths (recommended)
 
 ```text
@@ -19,8 +29,8 @@ Both endpoints support:
 └── models_active
 ```
 Expected model dir:
-- Host: `/nvme/models_active/colqwen2-v1.0`
-- Container: `/models/colqwen2-v1.0`
+- Host: `/nvme/models_active/colqwen2-v1.0-merged`
+- Container: `/models/colqwen2-v1.0-merged`
 
 ## Build
 ```bash
@@ -34,7 +44,7 @@ sudo docker run --rm --runtime nvidia --gpus all --ipc=host \
   -p 8003:8003 \
   --name pytorch-colqwen2-embed \
   -e API_KEY=eslllm \
-  -e MODEL_DIR=/models/colqwen2-v1.0 \
+  -e MODEL_DIR=/models/colqwen2-v1.0-merged \
   -e SERVED_MODEL_NAME=colqwen2-embed \
   pytorch-colqwen2-embed
 ```

@@ -4,7 +4,11 @@ set -euo pipefail
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-8003}"
 
+<<<<<<< HEAD
 MODEL_DIR="${MODEL_DIR:-/models/colqwen2-v1.0}"
+=======
+MODEL_DIR="${MODEL_DIR:-/models/colqwen2-v1.0-merged}"
+>>>>>>> feat/lab/pytorch_embed_services
 SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-colqwen2-embed}"
 
 DEVICE="${DEVICE:-cuda}"
